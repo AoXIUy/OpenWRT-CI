@@ -150,6 +150,7 @@ jobs:
           cd ./wrt/
 
           ./scripts/feeds update -a
+          $GITHUB_WORKSPACE/Scripts/diy.sh
           ./scripts/feeds install -a
 
       - name: Custom Packages
