@@ -1,7 +1,6 @@
 #!/bin/bash
 
 PKG_PATH="$GITHUB_WORKSPACE/wrt/package/"
-git clone https://github.com/destan19/OpenAppFilter.git ./$HP_RULE/OpenAppFilter
 
 #预置HomeProxy数据
 if [ -d *"homeproxy"* ]; then
