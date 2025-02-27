@@ -214,8 +214,7 @@ jobs:
             done
             
             find ./bin/targets/ -type f -exec mv -f {} ./upload/ \;
-            cd ./bin/packages
-            tar -zcvf Packages.tar.gz ./*
+            tar -zcvf Packages.tar.gz ./bin/packages/*
             mv Packages.tar.gz ./upload/
           fi
 
