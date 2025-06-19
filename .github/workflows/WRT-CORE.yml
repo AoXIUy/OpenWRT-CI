@@ -218,6 +218,8 @@ jobs:
             done
 
             find ./bin/targets/ -type f -exec mv -f {} ./upload/ \;
+            tar -zcvf Packages.tar.gz ./bin/packages/*
+            mv Packages.tar.gz ./upload/
 
             make clean -j$(nproc)
           fi
