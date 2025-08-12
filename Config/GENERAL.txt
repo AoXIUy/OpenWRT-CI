@@ -18,6 +18,7 @@ CONFIG_PACKAGE_luci-app-openlist=y
 CONFIG_PACKAGE_openssh-keygen=y
 CONFIG_PACKAGE_openssh-sftp-server=y
 CONFIG_PACKAGE_openssl-util=y
+CONFIG_PACKAGE_luci-app-pbr=y
 
 
 #增加插件
