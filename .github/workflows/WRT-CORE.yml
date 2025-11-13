@@ -184,7 +184,7 @@ jobs:
         run: |
           cd ./wrt/
 
-          make -j$(nproc) || make -j$(nproc) V=s
+          make -j$(nproc) || make -j1 V=s
 
       - name: Machine Information
         run: |
@@ -216,10 +216,10 @@ jobs:
               NEW_FILE="$WRT_INFO"-"$WRT_BRANCH"-"$NAME"-"$WRT_DATE"."$EXT"
               mv -f $FILE ./upload/$NEW_FILE
             done
-
             find ./bin/targets/ -type f -exec mv -f {} ./upload/ \;
             tar -zcvf Packages.tar.gz ./bin/packages/*
             mv Packages.tar.gz ./upload/
+            find ./bin/targets/ -type f -exec mv -f {} ./upload/ \;
 
             make clean -j$(nproc)
           fi
